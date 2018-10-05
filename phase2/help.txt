@@ -1,0 +1,27 @@
+Instructions for how to compile our program using command line:
+
+1. Navigate to the corresponding src folder, type:
+
+    -cd group0544
+    -cd phase2
+    -cd src
+
+2. Create a .class file for every java class of the program, type:
+
+    -javac photoManager/Main.java
+
+3. Now you can compile and run the program in the command line by typing:
+
+    -java photoManager.Main
+
+4. Set Up JUnit Environment
+    -javac -cp .:junit.jar ClassNameTest,java
+    replace ClassName with the actual test names.
+
+
+
+
+    Important Notes: The button on the bottom right corner of the program main interface is the new feature, a private
+    image safe. You can stores images in it and set a password for the safe. Images saved in the safe will disappear
+    from its current location in the hard drive, but it will can be recovered once you decrypt them.
+

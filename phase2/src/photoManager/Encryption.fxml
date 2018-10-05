@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="754.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photoManager.EncryptionController">
+   <children>
+      <ListView fx:id="archive" layoutX="14.0" layoutY="44.0" onMouseClicked="#selectArchive" prefHeight="647.0" prefWidth="200.0" />
+      <ListView fx:id="encryptedImage" layoutX="338.0" layoutY="44.0" onMouseClicked="#selectEncryptedImage" prefHeight="647.0" prefWidth="200.0" />
+      <Button fx:id="decrypt" layoutX="231.0" layoutY="318.0" mnemonicParsing="false" onAction="#DecryptImage" text="&lt;= Decrypt" />
+      <Button fx:id="encrypt" layoutX="231.0" layoutY="366.0" mnemonicParsing="false" onAction="#encryptImage" text="Encrypt =&gt;" />
+      <AnchorPane layoutX="586.0" layoutY="46.0" prefHeight="447.0" prefWidth="493.0">
+         <children>
+            <ImageView fx:id="image" fitHeight="447.0" fitWidth="485.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="586.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image path: " />
+      <Label fx:id="imagePath" layoutX="664.0" layoutY="521.0" prefHeight="15.0" prefWidth="403.0" />
+      <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chosen image" />
+      <Text layoutX="302.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypted image" />
+      <Button fx:id="close" layoutX="970.0" layoutY="668.0" mnemonicParsing="false" onAction="#close" text="Close" />
+      <Button fx:id="resetPassword" layoutX="841.0" layoutY="668.0" mnemonicParsing="false" onAction="#openReset" text="Reset password" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+# Phase 1 Design Questions
+
+Which part(s) of the program are responsible for reading the contents of the
+starting directory?
+
+What happens when a new tag is created?
+
+Which class is keeping track of the association between tags and files?
+
+In which class does execution starts?
+
+In which class we can check all renaming ever done?
+
+What is the stucture of File class?
+
+How user interact with files and tags?

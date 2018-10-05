@@ -1,0 +1,9 @@
+Yupeng Huang: GUI design, tag history related method in Controller class.
+
+Linhao Liu: Directory class, Connection structure of Controller and back-end,javadoc and partial modifiers.
+
+Hengguang Zhou: Image and Image Manager class, toggle-related method, UML.
+
+Ping Ju Kan: Tag and TagManager class, add and remove tag method in Controller, and handle exceptions.help.txt.
+
+We all discussed and worked on each other's stuff to allow the main class work.

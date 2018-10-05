@@ -1,0 +1,13 @@
+﻿1. TODO: Create a Directory class to manage the directories of the user's photos, and to store the images.--Linhao Liu
+
+2. TODO: Create a tag system to manage tags, we can edit tags associated with files, check all files with same tag, check used tags, manipulate images using tags. —Ping-Ju Kan
+
+3. TODO: Create a imageSystem class and a ImageManager to manage all the images, and to perform operations on it. --Hengguang Zhou
+
+4. TODO: JavaFX GUI design. --Yupeng Huang
+
+5. TODO: Serialization of the images and tags to store the info. --Ping-Ju Kan
+
+6. TODO: A controller class to connect the front end JavaFX(view) to the back end of the program(model).
+
+

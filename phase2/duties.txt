@@ -1,0 +1,20 @@
+Yupeng Huang: GUI design, tag history related method in Controller class.
+I created every interface for this program using javaFX scene builder and i also wrote every controller for the front end interfaces.
+For the controller I wrote, it has the function of connecting front end elements with back end elements,
+and updating front end display to users if corresponding elements in back end is changed, the change is also being passed in from user input to my controller.
+Changes will be updated in the backend by going through my controller.
+
+Linhao Liu: Directory class, Connection structure of Controller and back-end,javadoc and partial modifiers. 
+Phase2: UML diagram. Modify and add some Javadocs, directory can identify tags and add them to tag manager. Simplify several methods. Git ignore file.
+
+Hengguang Zhou: SafeManager, ImageManager, Image, helped debugging in other classes. Writing unit test.
+ For phase 2, I helped debugging other classes. Also, I introduced and discussed with my teammates about the idea of
+ having a private image safe as a new feature to our program, and I took part in both back end class design and front end UI
+ design.
+
+Ping Ju Kan: Tag and TagManager class, add and remove tag method in Controller, and handle exceptions.help.txt. Modify bugs in logger.
+ For phase 2, I implemented the image encrypting system that can allow the user to hide the images that they don't want to show others. Also connected
+the backend of the encrypting system with the front end with Yupeng Huang. Also helped with testing out the program and debug the system. Also reduced
+the cohesion among the TagManager and ImageManager together with Hengguang Zhou.
+
+We all discussed and worked on each other's stuff to allow the main class work.

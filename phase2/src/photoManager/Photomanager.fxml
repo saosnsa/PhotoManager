@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="828.0" prefWidth="1309.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photoManager.Controller">
+   <children>
+      <VBox>
+         <children>
+            <TabPane prefHeight="676.0" prefWidth="263.0">
+               <tabs>
+                  <Tab fx:id="chosenImage" closable="false" text="Archive">
+                     <content>
+                        <VBox prefHeight="636.0" prefWidth="263.0">
+                           <children>
+                              <ListView fx:id="imageList" onMouseClicked="#selectImageChosenImage" prefHeight="581.0" prefWidth="247.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ListView>
+                              <VBox prefHeight="63.0" prefWidth="243.0" spacing="10.0">
+                                 <children>
+                                    <AnchorPane prefHeight="63.0" prefWidth="243.0">
+                                       <children>
+                                          <Button fx:id="add" layoutX="-6.0" layoutY="3.0" mnemonicParsing="false" onAction="#addSingleImage" text="Add single image" />
+                                          <Button fx:id="remove" layoutX="-6.0" layoutY="35.0" mnemonicParsing="false" onAction="#removeImage" prefHeight="23.0" prefWidth="117.0" text="Remove Image" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="browseImageUnder" closable="false" text="Browse under">
+                     <content>
+                        <VBox prefHeight="612.0" prefWidth="278.0">
+                           <children>
+                              <ListView fx:id="pendingImageList" onMouseClicked="#selectImageBrowseUnder" prefHeight="581.0" prefWidth="247.0" />
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All images under selected directory" wrappingWidth="227.564453125" />
+                                    <HBox prefHeight="23.0" prefWidth="247.0">
+                                       <children>
+                                          <Button fx:id="browse" mnemonicParsing="false" onAction="#browse" prefHeight="23.0" prefWidth="117.0" text="Browse" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="2.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="1.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="browseImageIn" closable="false" text="Browse in">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="pendingImageListIn" onMouseClicked="#selectImageBrowseIn" prefHeight="581.0" prefWidth="247.0" />
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All images in selected directory" />
+                                    <Button fx:id="browseIn" mnemonicParsing="false" onAction="#browse" prefWidth="117.0" text="Browse">
+                                       <VBox.margin>
+                                          <Insets left="1.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <AnchorPane prefHeight="155.0" prefWidth="263.0">
+               <children>
+                  <Button fx:id="toggleTag" layoutX="6.0" layoutY="66.0" mnemonicParsing="false" onAction="#toggleTag" text="Toggle tag">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Text fx:id="toggleStatus" layoutX="93.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags: ON" wrappingWidth="76.240234375" />
+                  <Button fx:id="move" layoutX="4.0" layoutY="3.0" mnemonicParsing="false" onAction="#moveImage" prefWidth="117.0" text="move Image" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="839.0" prefWidth="846.0">
+         <children>
+            <StackPane>
+               <children>
+                  <ImageView fx:id="image" fitHeight="424.0" fitWidth="829.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER" />
+               </children>
+            </StackPane>
+            <HBox spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New name of the image" />
+                  <TextField fx:id="newImageName" prefHeight="23.0" prefWidth="216.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="changeName" mnemonicParsing="false" onAction="#changeName" text="Change name" />
+               </children>
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Path of the image:" />
+                  <Text fx:id="imageName" fill="#ff5757" onDragDetected="#changeName" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="334.240234375">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="175.0" prefWidth="846.0">
+               <children>
+                  <Text layoutX="42.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag history" />
+                  <ListView fx:id="tagHistoryList" layoutX="42.0" layoutY="54.0" prefHeight="91.0" prefWidth="354.0" />
+                  <ListView fx:id="nameHistoryList" layoutX="443.0" layoutY="54.0" prefHeight="91.0" prefWidth="354.0" />
+                  <Button fx:id="nameHistoryButton" layoutX="443.0" layoutY="154.0" mnemonicParsing="false" onAction="#nameRevertTo" text="Revert to old name" />
+                  <Text layoutX="443.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name history" />
+                  <Button fx:id="tagHistoryButton" layoutX="42.0" layoutY="154.0" mnemonicParsing="false" onAction="#tagRevertTo" text="Revert to old tags" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <TabPane prefHeight="768.0" prefWidth="201.0">
+               <tabs>
+                  <Tab fx:id="imageTags" closable="false" text="Image tags">
+                     <content>
+                        <VBox cache="true" prefHeight="785.0" prefWidth="201.0" spacing="10.0">
+                           <children>
+                              <ListView fx:id="tagList" prefHeight="590.0" prefWidth="201.0" />
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="newTagName">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Button fx:id="addTag" mnemonicParsing="false" onAction="#addTag" prefHeight="23.0" prefWidth="156.0" text="Add tag">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin></Button>
+                                    <Button fx:id="removeTag" mnemonicParsing="false" onAction="#removeTag" prefHeight="23.0" prefWidth="156.0" text="Remove tag">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="allTags" closable="false" text="All tags">
+                     <content>
+                        <VBox cache="true" prefHeight="731.0" prefWidth="201.0" spacing="10.0">
+                           <children>
+                              <ListView fx:id="allTagList" prefHeight="590.0" prefWidth="201.0" />
+                              <TextField fx:id="addAllTag">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="addToAllTag" mnemonicParsing="false" onAction="#addToAllTags" prefHeight="23.0" prefWidth="156.0" text="Add to all tags">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="removeFromAllImage" mnemonicParsing="false" onAction="#removeFromAllImages" text="Remove from all images">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="addToImage" layoutX="30.0" layoutY="610.0" mnemonicParsing="false" onAction="#addToImage" prefHeight="23.0" prefWidth="156.0" text="Add to image">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <AnchorPane>
+               <children>
+                  <Button fx:id="userLog" layoutX="19.0" mnemonicParsing="false" onAction="#goToUserLog" text="User log">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="encryption" layoutX="94.0" mnemonicParsing="false" onAction="#openLogin" text="Encryption" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

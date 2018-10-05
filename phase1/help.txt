@@ -1,0 +1,15 @@
+Instructions for how to compile our program using command line:
+
+1. Navigate to the corresponding src folder, type:
+
+    -cd group0544
+    -cd phase1
+    -cd src
+
+2. Create a .class file for every java class of the program, type:
+
+    -javac photoManager/Main.java
+
+3. Now you can compile and run the program in the command line by typing:
+
+    -java photoManager.Main
